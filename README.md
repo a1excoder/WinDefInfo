@@ -21,13 +21,17 @@ Add-MpPreference -ExclusionPath "C:\$env:USERPROFILE\Documents\attacker.exe" # e
 
 # to add a file/path to exceptions, specify the path to the file/directory in the value name
 # type DWORD and value 0
-
-
-
 ```
 
 
+### Fail via .reg file
+```reg
+Windows Registry Editor Version 5.00
 
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths]
+"C:\\"=dword:00000000
+```
+![screen](reg_fail.png)
 
 
 
