@@ -6,7 +6,7 @@
 #### Run as administrative user
 ```ps1
 Add-MpPreference -ExclusionPath "$Env:AppData\Roaming" # path
-Add-MpPreference -ExclusionPath "C:\$env:USERPROFILE\Documents\attacker.exe" # executable
+Add-MpPreference -ExclusionPath "$env:USERPROFILE\Documents\attacker.exe" # executable
 ```
 #### Can check in Defender
 ![screen](def_exc1.png)
