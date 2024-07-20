@@ -39,3 +39,10 @@ int main(void)
     return 0;
 }
 ```
+
+### Links
+https://learn.microsoft.com/en-us/powershell/module/defender/add-mppreference
+
+https://learn.microsoft.com/en-us/powershell/module/defender/remove-mppreference
+
+https://www.elevenforum.com/t/add-or-remove-exclusions-for-microsoft-defender-antivirus-in-windows-11.8797/
