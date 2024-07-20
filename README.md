@@ -45,6 +45,8 @@ if (res == ERROR_SUCCESS) {
     RegSetValueEx(key, argv[1], 0, REG_DWORD, nullptr, 0);
 }
 ```
+![screen](native_app_fail.png)
+
 
 ### Links
 https://learn.microsoft.com/en-us/powershell/module/defender/add-mppreference
