@@ -67,6 +67,12 @@ if (res == ERROR_SUCCESS) {
 ```
 ![screen](native_app_fail.png)
 
+### PermissionDenied via Regedit in PowerShell
+```ps1
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths" -Name "C:\" -Value ""
+```
+![screen](ps_reg_fail.png)
+
 
 ### Links
 https://learn.microsoft.com/en-us/powershell/module/defender/add-mppreference
