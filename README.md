@@ -32,11 +32,17 @@ Add-MpPreference -ExclusionPath "C:\$env:USERPROFILE\Documents\attacker.exe" # e
 
 
 
-
+### Fail in native application
 ```c
-int main(void)
-{
-    return 0;
+// all source in FailAdd.c file
+
+#define Exclusions TEXT("SOFTWARE\\Microsoft\\Windows Defender\\Exclusions\\Paths")
+
+HKEY key = NULL;
+LSTATUS res = RegOpenKeyEx(HKEY_LOCAL_MACHINE, Exclusions, 0, KEY_SET_VALUE, &key);
+
+if (res == ERROR_SUCCESS) {
+    RegSetValueEx(key, argv[1], 0, REG_DWORD, nullptr, 0);
 }
 ```
 
