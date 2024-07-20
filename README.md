@@ -36,7 +36,7 @@ powershell -WindowStyle Hidden -command "New-Item -Path $env:USERPROFILE\HackDir
 # HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Exclusions\Paths
 
 # to add a file/path to exceptions, specify the path to the file/directory in the value name
-# type DWORD and value 0
+# type REG_DWORD and value 0
 ```
 
 
