@@ -14,6 +14,13 @@ Add-MpPreference -ExclusionPath "$env:USERPROFILE\Documents\attacker.exe" # exec
 #### Can check in Regedit
 ![screen](regedit1.png)
 
+### Remove path/executable file via PowerShell
+#### Run as administrative user
+```ps1
+Remove-MpPreference -ExclusionPath "$Env:AppData\Roaming" # path
+Remove-MpPreference -ExclusionPath "$env:USERPROFILE\Documents\attacker.exe" # executable
+```
+
 ### Add path/executable file via Regedit
 ```ps1
 # Path in regedit
